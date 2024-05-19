@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		32441BB92BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32441BB82BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift */; };
-		32441BBB2BED0AB700AD9295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32441BBA2BED0AB700AD9295 /* ContentView.swift */; };
 		32441BBD2BED0ABA00AD9295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32441BBC2BED0ABA00AD9295 /* Assets.xcassets */; };
 		32441BC02BED0ABA00AD9295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32441BBF2BED0ABA00AD9295 /* Preview Assets.xcassets */; };
+		32F7216F2BFA3C0100EAF3E3 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7216E2BFA3C0100EAF3E3 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32441BB52BED0AB700AD9295 /* LittleLemonFoodOrderingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemonFoodOrderingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32441BB82BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonFoodOrderingAppApp.swift; sourceTree = "<group>"; };
-		32441BBA2BED0AB700AD9295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32441BBC2BED0ABA00AD9295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32441BBF2BED0ABA00AD9295 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32F7216E2BFA3C0100EAF3E3 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				32441BB82BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift */,
-				32441BBA2BED0AB700AD9295 /* ContentView.swift */,
+				32F7216B2BFA3B2600EAF3E3 /* Views */,
 				32441BBC2BED0ABA00AD9295 /* Assets.xcassets */,
 				32441BBE2BED0ABA00AD9295 /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				32441BBF2BED0ABA00AD9295 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32F7216B2BFA3B2600EAF3E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32F7216E2BFA3C0100EAF3E3 /* Onboarding.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32441BBB2BED0AB700AD9295 /* ContentView.swift in Sources */,
+				32F7216F2BFA3C0100EAF3E3 /* Onboarding.swift in Sources */,
 				32441BB92BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

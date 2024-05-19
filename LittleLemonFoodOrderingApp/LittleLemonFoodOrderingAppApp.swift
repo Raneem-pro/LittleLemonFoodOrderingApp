@@ -11,7 +11,7 @@ import SwiftUI
 struct LittleLemonFoodOrderingAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboarding()
         }
     }
 }
