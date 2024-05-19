@@ -9,6 +9,7 @@
 let kFirstNameKey = "uniqueFirstNameKey"
 let kLastNameKey = "uniqueLastNameKey"
 let kEmailKey = "uniqueEmailKey"
+let kIsLoggedIn = "kIsLoggedIn"
 
 import SwiftUI
 
@@ -42,10 +43,15 @@ struct Onboarding: View {
                             UserDefaults.standard.set(lastName, forKey: kLastNameKey)
                             UserDefaults.standard.set(email, forKey: kEmailKey)
                             isLoggedIn = true
+                            UserDefaults.standard.set(true,forKey: kIsLoggedIn)
                         }
                     }else{
                         print("there are an empty field")
                     }
+                }
+            }.onAppear{
+                if UserDefaults.standard.bool(forKey: kIsLoggedIn){
+                    isLoggedIn = true
                 }
             }
         }
