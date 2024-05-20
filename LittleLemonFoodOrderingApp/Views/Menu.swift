@@ -2,6 +2,7 @@ import SwiftUI
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var searchText : String = ""
 
     var body: some View {
         VStack {
@@ -14,35 +15,37 @@ struct Menu: View {
                 .font(.title2)
                 .padding(.top, 10)
             
-            Text("Order easily with Little Lemon: browse the menu, customize, pay securely, and track your delivery in real-time.")
+            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .padding([.top, .leading, .trailing], 10)
-            
-            FetchedObjects(predicate: NSPredicate(value: true), sortDescriptors: []) { (dishes: [Dish]) in
-                List {
-                    ForEach(dishes) { dish in
-                        HStack {
-                            Text("\(dish.title ?? "") - $\(dish.price ?? "")")
-                            Spacer()
-                            if let imageUrlString = dish.image, let imageUrl = URL(string: imageUrlString) {
-                                AsyncImage(url: imageUrl) { image in
-                                    image.resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .onAppear {
-            getMenuData()
-        }
-    }
+            TextField("Search menu", text: $searchText)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
+                          List {
+                              ForEach(dishes) { dish in
+                                  HStack {
+                                      Text("\(dish.title ?? "") - $\(dish.price ?? "")")
+                                      Spacer()
+                                      if let imageUrlString = dish.image, let imageUrl = URL(string: imageUrlString) {
+                                          AsyncImage(url: imageUrl) { image in
+                                              image.resizable()
+                                                  .aspectRatio(contentMode: .fit)
+                                                  .frame(width: 50, height: 50)
+                                          } placeholder: {
+                                              ProgressView()
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+                  .onAppear {
+                      getMenuData()
+                  }
+              }
     
     func getMenuData() {
         PersistenceController.shared.clear()
@@ -80,6 +83,17 @@ struct Menu: View {
         }
         
         dataTask.resume()
+    }
+    
+    func buildSortDescriptors() -> [NSSortDescriptor] {
+           return [NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))]
+       }
+    
+    func buildPredicate() -> NSPredicate {
+        if searchText.isEmpty{
+            return NSPredicate(value: true)
+        }
+        return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
     }
     
 }
