@@ -20,7 +20,7 @@ struct UserProfile: View {
     @State var isPasswordChangeSelected = false
     @State var isSpecialOffersSelected = false
     @State var isNewsLtterSelected = false
-    @State var isHome = false
+    @State var isLogout = false
 
     var body: some View {
         ScrollView{
@@ -119,7 +119,7 @@ struct UserProfile: View {
                 VStack{
                     Button {
                         UserDefaults.standard.set(false, forKey: kIsLoggedIn)
-                        self.presentation.wrappedValue.dismiss()
+                        isLogout.toggle()
                     } label: {
                         Text("Log out")
                             .foregroundStyle(Color.black)
@@ -180,6 +180,9 @@ struct UserProfile: View {
             .border(Color.secondary)
             
         }.navigationBarBackButtonHidden(true)
+            .fullScreenCover(isPresented: $isLogout){
+                Onboarding()
+            }
     }
 }
 
