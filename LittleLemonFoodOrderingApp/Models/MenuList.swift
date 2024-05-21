@@ -13,4 +13,5 @@ struct MenuList: Decodable, Identifiable {
     let price: String
     let description: String
     let image: String
+    let category : String
 }

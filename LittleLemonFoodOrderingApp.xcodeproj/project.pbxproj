@@ -10,6 +10,9 @@
 		32441BB92BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32441BB82BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift */; };
 		32441BBD2BED0ABA00AD9295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32441BBC2BED0ABA00AD9295 /* Assets.xcassets */; };
 		32441BC02BED0ABA00AD9295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32441BBF2BED0ABA00AD9295 /* Preview Assets.xcassets */; };
+		329746792BFBC17C00A8877A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329746782BFBC17C00A8877A /* Hero.swift */; };
+		3297467B2BFBC35900A8877A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3297467A2BFBC35900A8877A /* Header.swift */; };
+		32CE0F2F2BFD0054009742E3 /* DishDetelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE0F2E2BFD0054009742E3 /* DishDetelsView.swift */; };
 		32DEA0CA2BFA5125006B5F19 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0C92BFA5125006B5F19 /* UserProfile.swift */; };
 		32DEA0CF2BFA75AE006B5F19 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0CE2BFA75AE006B5F19 /* FetchedObjects.swift */; };
 		32DEA0D12BFA75B4006B5F19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0D02BFA75B4006B5F19 /* Persistence.swift */; };
@@ -26,6 +29,9 @@
 		32441BB82BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonFoodOrderingAppApp.swift; sourceTree = "<group>"; };
 		32441BBC2BED0ABA00AD9295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32441BBF2BED0ABA00AD9295 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		329746782BFBC17C00A8877A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		3297467A2BFBC35900A8877A /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		32CE0F2E2BFD0054009742E3 /* DishDetelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetelsView.swift; sourceTree = "<group>"; };
 		32DEA0C92BFA5125006B5F19 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		32DEA0CE2BFA75AE006B5F19 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 		32DEA0D02BFA75B4006B5F19 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 				32F721702BFA41FD00EAF3E3 /* Home.swift */,
 				32F721722BFA423E00EAF3E3 /* Menu.swift */,
 				32DEA0C92BFA5125006B5F19 /* UserProfile.swift */,
+				329746782BFBC17C00A8877A /* Hero.swift */,
+				3297467A2BFBC35900A8877A /* Header.swift */,
+				32CE0F2E2BFD0054009742E3 /* DishDetelsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,8 +198,11 @@
 				32DEA0D12BFA75B4006B5F19 /* Persistence.swift in Sources */,
 				32F721712BFA41FD00EAF3E3 /* Home.swift in Sources */,
 				32DEA0CA2BFA5125006B5F19 /* UserProfile.swift in Sources */,
+				3297467B2BFBC35900A8877A /* Header.swift in Sources */,
+				32CE0F2F2BFD0054009742E3 /* DishDetelsView.swift in Sources */,
 				32F721732BFA423E00EAF3E3 /* Menu.swift in Sources */,
 				32DEA0F32BFA7616006B5F19 /* ExampleDatabase.xcdatamodeld in Sources */,
+				329746792BFBC17C00A8877A /* Hero.swift in Sources */,
 				32DEA0CF2BFA75AE006B5F19 /* FetchedObjects.swift in Sources */,
 				32DEA0F62BFA77ED006B5F19 /* MenuList.swift in Sources */,
 				32441BB92BED0AB700AD9295 /* LittleLemonFoodOrderingAppApp.swift in Sources */,
