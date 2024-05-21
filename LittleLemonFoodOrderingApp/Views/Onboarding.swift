@@ -25,10 +25,16 @@ struct Onboarding: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Image("Logo")
+                VStack {
+                    Hero()
+                    Spacer()
+                }.padding()
+                    .background(Color.primaryColor1)
+                    .frame(maxWidth: .infinity, maxHeight: 260)
                 NavigationLink(destination: Home(), isActive: $isLoggedIn) {
                     EmptyView()
                 }
-                
                 TextField("First Name *", text: $firstName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
